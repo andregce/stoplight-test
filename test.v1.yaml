@@ -2,19 +2,32 @@ openapi: 3.0.0
 info:
   title: test
   version: '1.0'
-  description: |-
-    Description goes here
-
-    ```yaml http
-    {
-      "method": "post",
-      "url": "https://example.com/v1/numbers/{number}",
-      "headers": "\"content-type\": \"application/json;charset=UTF-8\"",
-      "body": "{\"foo\":true}"
-    }
-    ```
+  description: Description goes here
+  contact:
+    name: 800 Development Team
+    email: support@800.com
+    url: 'https://support.800.com/'
 servers:
   - url: 'http://localhost:3000'
-paths: {}
+tags: 
+  - name: Users
+    description: Users
+paths:
+  /users:
+    get:
+      description: Description goes here
+      summary: Your GET endpoint
+      tags: 
+        - Users
+      responses:
+        '200':
+          description: Success
+      operationId: get-users
+      parameters:
+        - name: query
+          schema:
+            type: string
+            enum: [id, company_id, user_id, title, type, text, should_be_sent_at, deleted_at, created_at, updated_at, state, unsubscribe_text, dynamic_fields, number_id, delivered_count, sent_count, responded_count, spam_count, undelivered_count, events_count, events_queued_count, last_broadcasted_at, is_started, error_msg, media, skip_inbox, unsubscriber_count]
+          in: query
 components:
   schemas: {}
