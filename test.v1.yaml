@@ -2,7 +2,8 @@ openapi: 3.0.0
 info:
   title: test
   version: '1.0'
-  description: Description goes here
+  description: |
+    Updated description!!!!!
   contact:
     name: 800 Development Team
     email: support@800.com
@@ -15,7 +16,8 @@ tags:
 paths:
   /users:
     get:
-      description: Description goes here
+      description: |
+        Updated description!!!!!
       summary: Your GET endpoint
       tags: 
         - Users
